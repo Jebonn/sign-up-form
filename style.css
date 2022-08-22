@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logo {
+    height: 10rem;
+}
+
+.section-one {
+    background-image: url(./img/sign_up_bg.jpg);
+    background-size: cover;
+}
+
+.section-two {
+    grid-column: 2;
+}
