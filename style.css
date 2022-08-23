@@ -8,8 +8,8 @@
 }
 
 body {
-    display: grid;
-    grid-template-columns: 8fr 10fr;
+    display: flex;
+    flex-wrap: wrap;
     height: 100vh;
 }
 
@@ -22,19 +22,28 @@ fieldset {
 fieldset > * {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 1.5rem;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    margin: 1rem;
 }
 
 fieldset > div > div {
     display: flex;
     flex-direction: column;
-    margin-right: 4rem;
+    margin-right: 1rem;
 }
 
 input {
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 4px;
     font-size: 1rem;
-    width: 14rem;
+    width: 12rem;
+    
+}
+
+input:focus {
+    outline: 1px solid skyblue;
+    box-shadow: 0 0 4px grey;
 }
 
 label {
@@ -58,7 +67,7 @@ label {
 .customer-message {
     font-size: large;
     font-weight: bold;
-    margin: 3.5rem 2rem;
+    margin: 3.5rem 3rem;
 }
 
 .logo {
@@ -66,7 +75,7 @@ label {
 }
 
 .log-in-message {
-    margin: .5rem 2rem;
+    margin: .5rem 2rem 2rem;
 }
 
 .odin {
@@ -80,11 +89,13 @@ label {
     background-size: cover;
     display: flex;
     flex-direction: column;
+    flex: 1 0 40%;
+    min-width: 280px;
 }
 
 .section-one > div {
     background: rgba(0, 0, 0, .4);
-    margin-top: 20vh;
+    margin-top: 18vh;
     padding: .5rem 0;
     display: flex;
     justify-content: center;
@@ -93,8 +104,9 @@ label {
 
 .section-two {
     background-color: #f9fafb;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: -apple-system, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    flex: 1 0 60%;
 }
